@@ -1,0 +1,15 @@
+{
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/jfif-to-png",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/jfif-to-png/",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}

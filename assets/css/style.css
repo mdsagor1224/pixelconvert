@@ -1,0 +1,38 @@
+:root{--p:#2563EB;--pd:#1D4ED8;--t:#111827;--m:#4B5563;--b:#E5E7EB;--bg:#F9FAFB;--ok:#166534;--er:#B91C1C}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--t);background:#fff}
+a{color:var(--p)}h1,h2,h3{line-height:1.25}h1{font-size:clamp(1.7rem,4vw,2.5rem);margin:0 0 .5rem}h2{margin-top:2.2rem}
+.w{max-width:960px;margin:0 auto;padding:0 20px}
+header{border-bottom:1px solid var(--b);background:#fff;position:sticky;top:0;z-index:5}
+.bar{display:flex;align-items:center;justify-content:space-between;height:56px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--t);text-decoration:none}.logo img{width:28px;height:28px}
+nav a{margin-left:20px;color:var(--t);text-decoration:none;font-weight:500}nav a:hover{color:var(--p)}
+#menu{display:none;background:none;border:1px solid var(--b);border-radius:8px;padding:6px 10px;font-size:1rem}
+:focus-visible{outline:3px solid #93C5FD;outline-offset:2px}
+.hero{padding:36px 0 8px}.hero p{max-width:680px;color:var(--m)}.priv{font-size:.9rem;color:var(--ok);font-weight:600}
+.card{border:1px solid var(--b);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,.06);margin:20px 0}
+.drop{border:2px dashed #9CA3AF;border-radius:12px;padding:36px 16px;text-align:center;transition:background .15s}
+.drop.over{background:#EFF6FF;border-color:var(--p)}.big{font-size:1.25rem;font-weight:600;margin:0}.drop p{margin:.2rem 0 .9rem;color:var(--m)}
+.btn{background:var(--p);color:#fff;border:0;border-radius:8px;padding:10px 18px;font:inherit;font-weight:600;cursor:pointer}
+.btn:hover{background:var(--pd)}.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.s{background:#fff;color:var(--t);border:1px solid #9CA3AF}.btn.s:hover{background:var(--bg)}
+.ctl{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-top:16px}
+.ctl label{display:flex;flex-direction:column;font-size:.85rem;color:var(--m);gap:4px}
+select{font:inherit;padding:9px 10px;border:1px solid #9CA3AF;border-radius:8px;background:#fff;color:var(--t)}
+.note{font-size:.9rem;background:#EFF6FF;border-radius:8px;padding:8px 12px;margin:12px 0 0}
+progress{width:100%;margin-top:14px;height:10px}#status{min-height:1.5em;margin-top:10px;font-size:.95rem}
+ul#list{list-style:none;padding:0;margin:12px 0 0}
+#list li{display:flex;gap:12px;align-items:center;border-top:1px solid var(--b);padding:12px 0;flex-wrap:wrap}
+#list img{width:56px;height:56px;object-fit:cover;border-radius:8px;border:1px solid var(--b);background:var(--bg)}
+.inf{flex:1;min-width:200px;font-size:.9rem;color:var(--m);overflow-wrap:anywhere}.inf strong{color:var(--t);display:block}
+.ok{color:var(--ok);font-weight:600}.er{color:var(--er);font-weight:600}
+.acts{display:flex;gap:8px;flex-wrap:wrap}.acts a{text-decoration:none;display:inline-block}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}.grid .card{margin:0}
+details{border-bottom:1px solid var(--b);padding:12px 0}summary{cursor:pointer;font-weight:600}
+footer{border-top:1px solid var(--b);margin-top:48px;padding:24px 0;color:var(--m);font-size:.9rem;background:var(--bg)}footer a{margin-right:14px}
+#pre{position:fixed;inset:0;background:#fff;z-index:99;display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center;font-weight:700;transition:opacity .25s;animation:hide .01s 3s forwards}
+#pre.off{opacity:0;pointer-events:none}#pre i{width:28px;height:28px;border:3px solid #DBEAFE;border-top-color:var(--p);border-radius:50%;animation:sp .8s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes hide{to{opacity:0;visibility:hidden;pointer-events:none}}
+@media(max-width:700px){#menu{display:block}nav{display:none;position:absolute;top:56px;left:0;right:0;background:#fff;border-bottom:1px solid var(--b);padding:8px 20px}nav.open{display:block}nav a{display:block;margin:0;padding:10px 0}}
+@media(prefers-reduced-motion:reduce){#pre,#pre i,.drop{transition:none;animation:none}#pre i{display:none}html{scroll-behavior:auto}}
